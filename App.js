@@ -1,10 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, TextInput, Image } from "react-native";
 import React, { useState } from "react";
+import { ScrollView } from "react-native-web";
 
 export default function App() {
-  const [matricula, setMatricula] = useState("Matricula");
-  const [nome, setNome] = useState("Nome");
+  const [matricula, setMatricula] = useState(" ");
+  const [nome, setNome] = useState(" ");
   const matInteira = () => {
     setMat(parseInt(matricula));
   };
@@ -32,8 +33,12 @@ export default function App() {
       <Image
         style={styles.imagem}
         resizeMode="stretch"
-        source={require("./image/Heimer.png")}
+        source={require("./image/em_manutencao_400x365.png")}
       />
+
+      <ScrollView style={styles.ScrollView}>
+        <Text style={styles.text}>Alan Perdomo e Silva - 202212004637</Text>
+      </ScrollView>
 
       <StatusBar style="auto" />
     </View>
@@ -52,6 +57,7 @@ const styles = StyleSheet.create({
   display1: {
     marginLeft: 60,
   },
+  display2: { marginLeft: 10, marginTop: 10 },
   matricula: {
     backgroundColor: "#FFF",
     borderEndWidth: 1,
@@ -69,8 +75,11 @@ const styles = StyleSheet.create({
     padding: 2,
   },
   imagem: {
-    width: "auto",
-    height: 500,
+    width: 240,
+    height: 240,
     margin: 10,
   },
+  text:{
+    marginLeft: 10
+  }
 });
