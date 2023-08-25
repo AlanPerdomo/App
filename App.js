@@ -7,6 +7,7 @@ import {
   Image,
   Button,
   Alert,
+  Linking,
 } from "react-native";
 import React, { useState } from "react";
 import { ScrollView } from "react-native-web";
@@ -43,6 +44,15 @@ export default function App() {
 
       <StatusBar style="auto" />
       <Button style={styles.button} title="Confirmar" onPress={showAlert} />
+      <Button
+        style={styles.button}
+        title="Abrir URL"
+        onPress={() =>
+          Linking.openURL(
+            "https://mediafiles.botpress.cloud/49c1a08e-ce38-4868-a0ea-01885747bba2/webchat/bot.html"
+          )
+        }
+      />
 
       <Image
         style={styles.imagem}
@@ -125,9 +135,9 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  button:{
+  button: {
     color: "red",
-  },  
+  },
   container: {
     flex: 1,
     backgroundColor: "#aaa",
