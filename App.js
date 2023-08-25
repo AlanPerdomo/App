@@ -1,5 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, TextInput, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Image,
+  Button,
+  Alert,
+} from "react-native";
 import React, { useState } from "react";
 import { ScrollView } from "react-native-web";
 
@@ -8,6 +16,9 @@ export default function App() {
   const [nome, setNome] = useState(" ");
   const matInteira = () => {
     setMat(parseInt(matricula));
+  };
+  const showAlert = () => {
+    window.alert("Cadastrado com sucesso!");
   };
 
   return (
@@ -30,6 +41,9 @@ export default function App() {
         onChangeText={(texto) => setNome(texto)}
       ></TextInput>
 
+      <StatusBar style="auto" />
+      <Button style={styles.button} title="Confirmar" onPress={showAlert} />
+
       <Image
         style={styles.imagem}
         resizeMode="stretch"
@@ -38,29 +52,71 @@ export default function App() {
 
       <ScrollView style={styles.ScrollView}>
         <Text style={styles.text}>
-          Alan Perdomo e Silva - 202212004637
-
-          The scroll view displays its content within the scrollable content region. As the user performs platform-appropriate scroll gestures, the scroll view adjusts what portion of the underlying content is visible. ScrollView can scroll horizontally, vertically, or both, but does not provide zooming functionality.
-
-In the following example, a ScrollView allows the user to scroll through a VStack containing 100 Text views. The image after the listing shows the scroll view’s temporarily visible scrollbar at the right; you can disable it with the showsIndicators parameter of the ScrollView initializer.
-
-The scroll view displays its content within the scrollable content region. As the user performs platform-appropriate scroll gestures, the scroll view adjusts what portion of the underlying content is visible. ScrollView can scroll horizontally, vertically, or both, but does not provide zooming functionality.
-
-In the following example, a ScrollView allows the user to scroll through a VStack containing 100 Text views. The image after the listing shows the scroll view’s temporarily visible scrollbar at the right; you can disable it with the showsIndicators parameter of the ScrollView initializer.The scroll view displays its content within the scrollable content region. As the user performs platform-appropriate scroll gestures, the scroll view adjusts what portion of the underlying content is visible. ScrollView can scroll horizontally, vertically, or both, but does not provide zooming functionality.
-
-In the following example, a ScrollView allows the user to scroll through a VStack containing 100 Text views. The image after the listing shows the scroll view’s temporarily visible scrollbar at the right; you can disable it with the showsIndicators parameter of the ScrollView initializer.The scroll view displays its content within the scrollable content region. As the user performs platform-appropriate scroll gestures, the scroll view adjusts what portion of the underlying content is visible. ScrollView can scroll horizontally, vertically, or both, but does not provide zooming functionality.
-
-In the following example, a ScrollView allows the user to scroll through a VStack containing 100 Text views. The image after the listing shows the scroll view’s temporarily visible scrollbar at the right; you can disable it with the showsIndicators parameter of the ScrollView initializer.The scroll view displays its content within the scrollable content region. As the user performs platform-appropriate scroll gestures, the scroll view adjusts what portion of the underlying content is visible. ScrollView can scroll horizontally, vertically, or both, but does not provide zooming functionality.
-
-In the following example, a ScrollView allows the user to scroll through a VStack containing 100 Text views. The image after the listing shows the scroll view’s temporarily visible scrollbar at the right; you can disable it with the showsIndicators parameter of the ScrollView initializer.The scroll view displays its content within the scrollable content region. As the user performs platform-appropriate scroll gestures, the scroll view adjusts what portion of the underlying content is visible. ScrollView can scroll horizontally, vertically, or both, but does not provide zooming functionality.
-
-In the following example, a ScrollView allows the user to scroll through a VStack containing 100 Text views. The image after the listing shows the scroll view’s temporarily visible scrollbar at the right; you can disable it with the showsIndicators parameter of the ScrollView initializer.The scroll view displays its content within the scrollable content region. As the user performs platform-appropriate scroll gestures, the scroll view adjusts what portion of the underlying content is visible. ScrollView can scroll horizontally, vertically, or both, but does not provide zooming functionality.
-
-In the following example, a ScrollView allows the user to scroll through a VStack containing 100 Text views. The image after the listing shows the scroll view’s temporarily visible scrollbar at the right; you can disable it with the showsIndicators parameter of the ScrollView initializer.
-          
-          
-
-          </Text>
+          Alan Perdomo e Silva - 202212004637 The scroll view displays its
+          content within the scrollable content region. As the user performs
+          platform-appropriate scroll gestures, the scroll view adjusts what
+          portion of the underlying content is visible. ScrollView can scroll
+          horizontally, vertically, or both, but does not provide zooming
+          functionality. In the following example, a ScrollView allows the user
+          to scroll through a VStack containing 100 Text views. The image after
+          the listing shows the scroll view’s temporarily visible scrollbar at
+          the right; you can disable it with the showsIndicators parameter of
+          the ScrollView initializer. The scroll view displays its content
+          within the scrollable content region. As the user performs
+          platform-appropriate scroll gestures, the scroll view adjusts what
+          portion of the underlying content is visible. ScrollView can scroll
+          horizontally, vertically, or both, but does not provide zooming
+          functionality. In the following example, a ScrollView allows the user
+          to scroll through a VStack containing 100 Text views. The image after
+          the listing shows the scroll view’s temporarily visible scrollbar at
+          the right; you can disable it with the showsIndicators parameter of
+          the ScrollView initializer.The scroll view displays its content within
+          the scrollable content region. As the user performs
+          platform-appropriate scroll gestures, the scroll view adjusts what
+          portion of the underlying content is visible. ScrollView can scroll
+          horizontally, vertically, or both, but does not provide zooming
+          functionality. In the following example, a ScrollView allows the user
+          to scroll through a VStack containing 100 Text views. The image after
+          the listing shows the scroll view’s temporarily visible scrollbar at
+          the right; you can disable it with the showsIndicators parameter of
+          the ScrollView initializer.The scroll view displays its content within
+          the scrollable content region. As the user performs
+          platform-appropriate scroll gestures, the scroll view adjusts what
+          portion of the underlying content is visible. ScrollView can scroll
+          horizontally, vertically, or both, but does not provide zooming
+          functionality. In the following example, a ScrollView allows the user
+          to scroll through a VStack containing 100 Text views. The image after
+          the listing shows the scroll view’s temporarily visible scrollbar at
+          the right; you can disable it with the showsIndicators parameter of
+          the ScrollView initializer.The scroll view displays its content within
+          the scrollable content region. As the user performs
+          platform-appropriate scroll gestures, the scroll view adjusts what
+          portion of the underlying content is visible. ScrollView can scroll
+          horizontally, vertically, or both, but does not provide zooming
+          functionality. In the following example, a ScrollView allows the user
+          to scroll through a VStack containing 100 Text views. The image after
+          the listing shows the scroll view’s temporarily visible scrollbar at
+          the right; you can disable it with the showsIndicators parameter of
+          the ScrollView initializer.The scroll view displays its content within
+          the scrollable content region. As the user performs
+          platform-appropriate scroll gestures, the scroll view adjusts what
+          portion of the underlying content is visible. ScrollView can scroll
+          horizontally, vertically, or both, but does not provide zooming
+          functionality. In the following example, a ScrollView allows the user
+          to scroll through a VStack containing 100 Text views. The image after
+          the listing shows the scroll view’s temporarily visible scrollbar at
+          the right; you can disable it with the showsIndicators parameter of
+          the ScrollView initializer.The scroll view displays its content within
+          the scrollable content region. As the user performs
+          platform-appropriate scroll gestures, the scroll view adjusts what
+          portion of the underlying content is visible. ScrollView can scroll
+          horizontally, vertically, or both, but does not provide zooming
+          functionality. In the following example, a ScrollView allows the user
+          to scroll through a VStack containing 100 Text views. The image after
+          the listing shows the scroll view’s temporarily visible scrollbar at
+          the right; you can disable it with the showsIndicators parameter of
+          the ScrollView initializer.
+        </Text>
       </ScrollView>
 
       <StatusBar style="auto" />
@@ -69,12 +125,17 @@ In the following example, a ScrollView allows the user to scroll through a VStac
 }
 
 const styles = StyleSheet.create({
+  button:{
+    color: "red",
+  },  
   container: {
     flex: 1,
     backgroundColor: "#aaa",
     maxWidth: 740,
     position: "absolute",
-    padding: "auto"
+    padding: "auto",
+    alignItems: "center",
+    justifyContent: "center",
   },
   display: {
     marginLeft: 20,
@@ -106,6 +167,6 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   text: {
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 });
